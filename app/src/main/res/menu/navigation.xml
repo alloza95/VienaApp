@@ -7,12 +7,12 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_menu"
         android:icon="@drawable/ic_restaurant_interface_symbol_of_fork_and_knife_couple"
         android:title="@string/menu" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_restaurants"
         android:icon="@drawable/ic_location_on_black_24dp"
         android:title="@string/restaurants" />
 
