@@ -11,14 +11,26 @@
                   <entry key="vectorAssetStep">
                     <value>
                       <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="jar:file:/E:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/communication/ic_location_on_black_24dp.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="41" />
-                            <entry key="outputName" value="ic_viena_logo_toolbar" />
-                            <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\arnauac\Desktop\viena_logo_toolbar.svg" />
-                            <entry key="width" value="150" />
+                            <entry key="outputName" value="ic_restaurant_interface_symbol_of_fork_and_knife_couple" />
+                            <entry key="sourceFile" value="F:\CITM 2018 4t\Programacio Android\1-PROJECTE_APP_VIENA\Disseny\icons\restaurant-interface-symbol-of-fork-and-knife-couple.svg" />
                           </map>
                         </option>
                       </PersistentState>
