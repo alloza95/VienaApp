@@ -40,9 +40,6 @@ public class MenuFragment extends Fragment {
         adapter = new CategoryItemAdapter(this.getActivity(), items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        recyclerView.addItemDecoration(
-                new DividerItemDecoration(this.getActivity(), DividerItemDecoration.VERTICAL)
-        );
 
         recyclerView.setAdapter(adapter);
 
