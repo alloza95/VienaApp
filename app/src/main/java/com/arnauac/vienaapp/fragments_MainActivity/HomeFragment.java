@@ -22,7 +22,7 @@ public class HomeFragment extends Fragment {
         ImageAdapter adapter = new ImageAdapter(this.getActivity());
         viewPager.setAdapter(adapter);
 
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        TabLayout tabLayout = view.findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager, true);
         return view;
     }

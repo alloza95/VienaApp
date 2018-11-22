@@ -30,11 +30,11 @@ public class MenuFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         items = new ArrayList<>();
-        items.add(new CategoryItem("Hamburgueses"));
-        items.add(new CategoryItem("Flautes"));
-        items.add(new CategoryItem("Postres"));
-        items.add(new CategoryItem("Begudes"));
-        items.add(new CategoryItem("Coques"));
+        items.add(new CategoryItem("Hamburgueses", R.drawable.cat_01_hamburgueses));
+        items.add(new CategoryItem("Coques", R.drawable.cat_02_coques));
+        items.add(new CategoryItem("Flautes", R.drawable.cat_03_flautes));
+        items.add(new CategoryItem("Lleugers", R.drawable.cat_04_lleugers));
+        items.add(new CategoryItem("Patates", R.drawable.cat_05_patates));
 
         recyclerView = view.findViewById(R.id.listCaegory);
         adapter = new CategoryItemAdapter(this.getActivity(), items);

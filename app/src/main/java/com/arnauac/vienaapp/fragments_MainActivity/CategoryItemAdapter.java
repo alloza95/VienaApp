@@ -37,4 +37,6 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder
     public int getItemCount() {
         return items.size();
     }
+
+
 }
