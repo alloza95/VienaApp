@@ -3,6 +3,7 @@ package com.arnauac.vienaapp.fragments_MainActivity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -20,6 +21,10 @@ public class HomeFragment extends Fragment {
         ViewPager viewPager = view.findViewById(R.id.ViewPager);
         ImageAdapter adapter = new ImageAdapter(this.getActivity());
         viewPager.setAdapter(adapter);
+
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager, true);
         return view;
     }
+
 }
