@@ -14,7 +14,7 @@ public class CategoryItemHolder extends RecyclerView.ViewHolder{
     public CategoryItemHolder(View itemView) {
         super(itemView);
         nameCategory_view = itemView.findViewById(R.id.categoryName_view);
-        imageCategory_view = itemView.findViewById(R.id.categoryImage_view);
+        imageCategory_view = itemView.findViewById(R.id.productImage_view);
         imageCategory_view.setScaleType(ImageView.ScaleType.CENTER_CROP);
     }
 

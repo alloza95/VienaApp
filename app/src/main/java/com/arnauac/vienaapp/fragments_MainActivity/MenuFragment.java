@@ -36,7 +36,7 @@ public class MenuFragment extends Fragment {
         items.add(new CategoryItem("Lleugers", R.drawable.cat_04_lleugers));
         items.add(new CategoryItem("Patates", R.drawable.cat_05_patates));
 
-        recyclerView = view.findViewById(R.id.listCaegory);
+        recyclerView = view.findViewById(R.id.listCategory);
         adapter = new CategoryItemAdapter(this.getActivity(), items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
