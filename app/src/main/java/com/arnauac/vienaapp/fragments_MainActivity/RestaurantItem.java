@@ -1,54 +1,40 @@
 package com.arnauac.vienaapp.fragments_MainActivity;
 
-public class RestaurantItem {
+class RestaurantItem {
 
     private String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant;
+    private ServicesItem services;
 
-    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant) {
+    RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, ServicesItem servicesItem) {
         this.nameRestaurant = nameRestaurant;
         this.streetRestaurant = streetRestaurant;
         this.numberRestaurant = numberRestaurant;
         this.codepostRestaurant = codepostRestaurant;
         this.townRestaurant = townRestaurant;
+        this.services = servicesItem;
     }
 
-    public String getNameRestaurant() {
+    String getNameRestaurant() {
         return nameRestaurant;
     }
 
-    public void setNameRestaurant(String nameRestaurant) {
-        this.nameRestaurant = nameRestaurant;
-    }
-
-    public String getStreetRestaurant() {
+    String getStreetRestaurant() {
         return streetRestaurant;
     }
 
-    public void setStreetRestaurant(String streetRestaurant) {
-        this.streetRestaurant = streetRestaurant;
-    }
-
-    public String getNumberRestaurant() {
+    String getNumberRestaurant() {
         return numberRestaurant;
     }
 
-    public void setNumberRestaurant(String numberRestaurant) {
-        this.numberRestaurant = numberRestaurant;
-    }
-
-    public String getCodepostRestaurant() {
+    String getCodepostRestaurant() {
         return codepostRestaurant;
     }
 
-    public void setCodepostRestaurant(String codepostRestaurant) {
-        this.codepostRestaurant = codepostRestaurant;
-    }
-
-    public String getTownRestaurant() {
+    String getTownRestaurant() {
         return townRestaurant;
     }
 
-    public void setTownRestaurant(String townRestaurant) {
-        this.townRestaurant = townRestaurant;
+    ServicesItem getServices() {
+        return services;
     }
 }

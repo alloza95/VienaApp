@@ -19,73 +19,56 @@ import java.util.List;
 public class RestaurantsFragment extends Fragment {
 
     //Model
-    //List<RestaurantItem> items;
-
-    List<ServicesItem> items;
-
-    //Referències a elements de la pantalla
-
-    private RecyclerView recyclerView;
-    //private RestaurantItemAdapter adapter;
-
-    private ServicesItemAdapter adapter;
+    List<RestaurantItem> items;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_restaurants, container, false);
 
-        /*items = new ArrayList<>();
-        items.add(new RestaurantItem(
-                "Can Solà",
-                "Carrer de Can Solà" + ",",
-                " " + "1",
-                "08173" + ",",
-                " " + "Sant Cugat del Vallès"
-        ));
-        items.add(new RestaurantItem(
-                "Can Solà",
-                "Carrer de Can Solà" + ",",
-                " " + "1",
-                "08173" + ",",
-                " " + "Sant Cugat del Vallès"
-        ));
-        items.add(new RestaurantItem(
-                "Can Solà",
-                "Carrer de Can Solà" + ",",
-                " " + "1",
-                "08173" + ",",
-                " " + "Sant Cugat del Vallès"
-        ));
-        items.add(new RestaurantItem(
-                "Can Solà",
-                "Carrer de Can Solà" + ",",
-                " " + "1",
-                "08173" + ",",
-                " " + "Sant Cugat del Vallès"
-        ));
-
-        recyclerView = view.findViewById(R.id.listRestaurant);
-        adapter = new RestaurantItemAdapter(this.getActivity(), items);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        recyclerView.addItemDecoration(
-                new DividerItemDecoration(this.getActivity(), DividerItemDecoration.VERTICAL)
-        );
-
-        recyclerView.setAdapter(adapter);*/
-
         items = new ArrayList<>();
-        items.add(new ServicesItem(true, true, true, true));
-        items.add(new ServicesItem(false, true, true, true));
-        items.add(new ServicesItem(false, false, true, true));
-        items.add(new ServicesItem(false, false, false, true));
+        items.add(new RestaurantItem(
+                "Can Solà",
+                "Carrer de Can Solà" + ",",
+                " " + "1",
+                "08173" + ",",
+                " " + "Sant Cugat del Vallès",
+                new ServicesItem(true, true, true, true)
+        ));
+        items.add(new RestaurantItem(
+                "Can Solà",
+                "Carrer de Can Solà" + ",",
+                " " + "1",
+                "08173" + ",",
+                " " + "Sant Cugat del Vallès",
+                new ServicesItem(false, true, true, true)
+        ));
+        items.add(new RestaurantItem(
+                "Can Solà",
+                "Carrer de Can Solà" + ",",
+                " " + "1",
+                "08173" + ",",
+                " " + "Sant Cugat del Vallès",
+                new ServicesItem(false, false, true, true)
+        ));
+        items.add(new RestaurantItem(
+                "Can Solà",
+                "Carrer de Can Solà" + ",",
+                " " + "1",
+                "08173" + ",",
+                " " + "Sant Cugat del Vallès",
+                new ServicesItem(false, false, false, true)
+        ));
 
-        recyclerView = view.findViewById(R.id.listRestaurant);
-        adapter = new ServicesItemAdapter(this.getActivity(), items);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        //Referències a elements de la pantalla
+        RecyclerView recyclerView = view.findViewById(R.id.listRestaurant);
+        RestaurantItemAdapter adapter = new RestaurantItemAdapter(this.getContext(), items);
 
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerView.addItemDecoration(
+                new DividerItemDecoration(this.getContext(), DividerItemDecoration.VERTICAL)
+        );
         recyclerView.setAdapter(adapter);
 
         return view;
