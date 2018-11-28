@@ -1,4 +1,4 @@
-package com.arnauac.vienaapp.fragments_MainActivity;
+package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
 class ServicesItem {
     private Boolean wifi, terrace, autoViena, parking, playground;

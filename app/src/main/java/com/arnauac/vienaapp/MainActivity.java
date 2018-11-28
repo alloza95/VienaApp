@@ -6,9 +6,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.arnauac.vienaapp.fragments_MainActivity.HomeFragment;
-import com.arnauac.vienaapp.fragments_MainActivity.MenuFragment;
-import com.arnauac.vienaapp.fragments_MainActivity.RestaurantsFragment;
+import com.arnauac.vienaapp.fragments_MainActivity.HomeFragment.HomeFragment;
+import com.arnauac.vienaapp.fragments_MainActivity.MenuFragment.MenuFragment;
+import com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment.RestaurantsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

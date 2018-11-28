@@ -1,6 +1,5 @@
-package com.arnauac.vienaapp;
+package com.arnauac.vienaapp.fragments_MainActivity.HomeFragment;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
@@ -8,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.arnauac.vienaapp.fragments_MainActivity.HomeFragment;
+import com.arnauac.vienaapp.R;
 
 public class ImageAdapter extends PagerAdapter {
     private FragmentActivity mContext;
@@ -21,7 +20,6 @@ public class ImageAdapter extends PagerAdapter {
     @Override
     public int getCount() {
         return  mImageIds.length;
-
     }
 
     @Override

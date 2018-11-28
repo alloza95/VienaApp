@@ -1,6 +1,5 @@
-package com.arnauac.vienaapp.fragments_MainActivity;
+package com.arnauac.vienaapp.fragments_MainActivity.MenuFragment;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
@@ -16,7 +15,7 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder
     private FragmentActivity mContext;
     private List<CategoryItem> items;
 
-    public CategoryItemAdapter(FragmentActivity mContext, List<CategoryItem> items) {
+    CategoryItemAdapter(FragmentActivity mContext, List<CategoryItem> items) {
         this.mContext = mContext;
         this.items = items;
     }
@@ -37,6 +36,4 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder
     public int getItemCount() {
         return items.size();
     }
-
-
 }

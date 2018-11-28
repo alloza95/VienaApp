@@ -1,4 +1,4 @@
-package com.arnauac.vienaapp.fragments_MainActivity;
+package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -1,4 +1,4 @@
-package com.arnauac.vienaapp.fragments_MainActivity;
+package com.arnauac.vienaapp.fragments_MainActivity.HomeFragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.arnauac.vienaapp.ImageAdapter;
 import com.arnauac.vienaapp.R;
 
 public class HomeFragment extends Fragment {

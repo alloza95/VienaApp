@@ -1,4 +1,4 @@
-package com.arnauac.vienaapp.fragments_MainActivity;
+package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
 import android.graphics.PorterDuff;
 import android.support.v4.content.ContextCompat;
