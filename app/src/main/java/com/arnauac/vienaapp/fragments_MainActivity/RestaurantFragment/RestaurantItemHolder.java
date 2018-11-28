@@ -34,61 +34,32 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
         codepostRestaurant_view.setText(item.getCodepostRestaurant());
         townRestaurant_view.setText(item.getTownRestaurant());
 
-        //Icones dels serveis
         if (item.getServices().getWifi()){
-            ImageView imageView = new ImageView(this.linearLayout.getContext());
-            imageView.setImageResource(R.drawable.ic_wifi_connection_signal_symbol);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,100,0);
-            layoutParams.gravity = Gravity.CENTER;
-            imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-            imageView.setLayoutParams(layoutParams);
-
-            linearLayout.addView(imageView);
+            createIcon(R.drawable.ic_wifi_connection_signal_symbol);
         }
         if (item.getServices().getTerrace()){
-            ImageView imageView = new ImageView(this.linearLayout.getContext());
-            imageView.setImageResource(R.drawable.ic_sun);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,100,0);
-            layoutParams.gravity = Gravity.CENTER;
-            imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-            imageView.setLayoutParams(layoutParams);
-
-            linearLayout.addView(imageView);
+            createIcon(R.drawable.ic_sun);
         }
         if (item.getServices().getAutoViena()){
-            ImageView imageView = new ImageView(this.linearLayout.getContext());
-            imageView.setImageResource(R.drawable.ic_car_fill_from_frontal_view);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,100,0);
-            layoutParams.gravity = Gravity.CENTER;
-            imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-            imageView.setLayoutParams(layoutParams);
-
-            linearLayout.addView(imageView);
+            createIcon(R.drawable.ic_car_fill_from_frontal_view);
         }
         if (item.getServices().getParking()){
-            ImageView imageView = new ImageView(this.linearLayout.getContext());
-            imageView.setImageResource(R.drawable.ic_parking);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,100,0);
-            layoutParams.gravity = Gravity.CENTER;
-            imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-            imageView.setLayoutParams(layoutParams);
-
-            linearLayout.addView(imageView);
+            createIcon(R.drawable.ic_parking);
         }
         if (item.getServices().getPlayground()){
-            ImageView imageView = new ImageView(this.linearLayout.getContext());
-            imageView.setImageResource(R.drawable.ic_playground);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,100,0);
-            layoutParams.gravity = Gravity.CENTER;
-            imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
-            imageView.setLayoutParams(layoutParams);
-
-            linearLayout.addView(imageView);
+            createIcon(R.drawable.ic_playground);
         }
+    }
+
+    private void createIcon(int image) {
+        ImageView imageView = new ImageView(this.linearLayout.getContext());
+        imageView.setImageResource(image);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
+        layoutParams.setMargins(0,0,100,0);
+        layoutParams.gravity = Gravity.CENTER;
+        imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+        imageView.setLayoutParams(layoutParams);
+
+        linearLayout.addView(imageView);
     }
 }
