@@ -39,7 +39,7 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
             ImageView imageView = new ImageView(this.linearLayout.getContext());
             imageView.setImageResource(R.drawable.ic_wifi_connection_signal_symbol);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,50,0);
+            layoutParams.setMargins(0,0,100,0);
             layoutParams.gravity = Gravity.CENTER;
             imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
             imageView.setLayoutParams(layoutParams);
@@ -50,7 +50,7 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
             ImageView imageView = new ImageView(this.linearLayout.getContext());
             imageView.setImageResource(R.drawable.ic_sun);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,50,0);
+            layoutParams.setMargins(0,0,100,0);
             layoutParams.gravity = Gravity.CENTER;
             imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
             imageView.setLayoutParams(layoutParams);
@@ -61,7 +61,7 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
             ImageView imageView = new ImageView(this.linearLayout.getContext());
             imageView.setImageResource(R.drawable.ic_car_fill_from_frontal_view);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,50,0);
+            layoutParams.setMargins(0,0,100,0);
             layoutParams.gravity = Gravity.CENTER;
             imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
             imageView.setLayoutParams(layoutParams);
@@ -70,9 +70,20 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
         }
         if (item.getServices().getParking()){
             ImageView imageView = new ImageView(this.linearLayout.getContext());
+            imageView.setImageResource(R.drawable.ic_parking);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
+            layoutParams.setMargins(0,0,100,0);
+            layoutParams.gravity = Gravity.CENTER;
+            imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+            imageView.setLayoutParams(layoutParams);
+
+            linearLayout.addView(imageView);
+        }
+        if (item.getServices().getPlayground()){
+            ImageView imageView = new ImageView(this.linearLayout.getContext());
             imageView.setImageResource(R.drawable.ic_playground);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
-            layoutParams.setMargins(0,0,50,0);
+            layoutParams.setMargins(0,0,100,0);
             layoutParams.gravity = Gravity.CENTER;
             imageView.setColorFilter(ContextCompat.getColor(this.linearLayout.getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
             imageView.setLayoutParams(layoutParams);
