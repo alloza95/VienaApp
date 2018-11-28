@@ -19,18 +19,23 @@ import java.util.List;
 public class RestaurantsFragment extends Fragment {
 
     //Model
-    List<RestaurantItem> items;
+    //List<RestaurantItem> items;
+
+    List<ServicesItem> items;
 
     //Referències a elements de la pantalla
+
     private RecyclerView recyclerView;
-    private RestaurantItemAdapter adapter;
+    //private RestaurantItemAdapter adapter;
+
+    private ServicesItemAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_restaurants, container, false);
 
-        items = new ArrayList<>();
+        /*items = new ArrayList<>();
         items.add(new RestaurantItem(
                 "Can Solà",
                 "Carrer de Can Solà" + ",",
@@ -67,6 +72,19 @@ public class RestaurantsFragment extends Fragment {
         recyclerView.addItemDecoration(
                 new DividerItemDecoration(this.getActivity(), DividerItemDecoration.VERTICAL)
         );
+
+        recyclerView.setAdapter(adapter);*/
+
+        items = new ArrayList<>();
+        items.add(new ServicesItem(true, true, true, true));
+        items.add(new ServicesItem(false, true, true, true));
+        items.add(new ServicesItem(false, false, true, true));
+        items.add(new ServicesItem(false, false, false, true));
+
+        recyclerView = view.findViewById(R.id.listRestaurant);
+        adapter = new ServicesItemAdapter(this.getActivity(), items);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         recyclerView.setAdapter(adapter);
 
