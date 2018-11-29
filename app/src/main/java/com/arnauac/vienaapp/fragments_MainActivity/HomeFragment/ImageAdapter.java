@@ -3,6 +3,7 @@ package com.arnauac.vienaapp.fragments_MainActivity.HomeFragment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -32,21 +33,16 @@ public class ImageAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        // imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
         Glide
                 .with(imageView.getContext())
                 .load(mImageIds[position])
-                .apply(new RequestOptions().override(450,800).fitCenter())
+                .apply(new RequestOptions().centerCrop())
                 .into(imageView);
 
         container.addView(imageView, 0);
         return imageView;
-
-        /*Glide
-                .with(imageCategory_view.getContext())
-                .load(item.getImageCategory())
-                .apply(new RequestOptions().override(575,345).fitCenter())
-                .into(imageCategory_view);*/
     }
 
     @Override
