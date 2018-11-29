@@ -14,6 +14,7 @@ import java.util.List;
 public class RestaurantItemAdapter extends RecyclerView.Adapter<RestaurantItemHolder> {
     private Context mContext;
     private List<RestaurantItem> items;
+    private OnClickListener onClickListener;
 
     RestaurantItemAdapter(Context mContext, List<RestaurantItem> items) {
         this.mContext = mContext;
@@ -24,7 +25,7 @@ public class RestaurantItemAdapter extends RecyclerView.Adapter<RestaurantItemHo
     @Override
     public RestaurantItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_restaurant, parent, false);
-        return new RestaurantItemHolder(itemView);
+        return new RestaurantItemHolder(itemView, onClickListener);
     }
 
     @Override
@@ -35,5 +36,13 @@ public class RestaurantItemAdapter extends RecyclerView.Adapter<RestaurantItemHo
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    void setOnClickListener(OnClickListener listener) {
+        this.onClickListener = listener;
+    }
+
+    public interface OnClickListener {
+        void onClick(int position);
     }
 }

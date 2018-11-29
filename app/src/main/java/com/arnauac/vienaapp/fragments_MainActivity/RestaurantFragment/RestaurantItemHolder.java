@@ -15,7 +15,7 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
     private TextView nameRestaurant_view, streetRestaurant_view, numberRestaurant_view, codepostRestaurant_view, townRestaurant_view;
     private LinearLayout linearLayout;
 
-    RestaurantItemHolder(View itemView) {
+    RestaurantItemHolder(View itemView, final RestaurantItemAdapter.OnClickListener onClickListener) {
         super(itemView);
         nameRestaurant_view = itemView.findViewById(R.id.nameRestaurant_view);
         streetRestaurant_view = itemView.findViewById(R.id.streetRestaurant_view);
@@ -24,6 +24,16 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
         townRestaurant_view = itemView.findViewById(R.id.townRestaurant_view);
 
         linearLayout = itemView.findViewById(R.id.icons_linearLayout);
+        
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onClickListener != null) {
+                    int pos = getAdapterPosition();
+                    onClickListener.onClick(pos);
+                }
+            }
+        });
 
     }
 
