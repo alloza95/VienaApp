@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.arnauac.vienaapp.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 public class ImageAdapter extends PagerAdapter {
     private FragmentActivity mContext;
@@ -31,9 +33,20 @@ public class ImageAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setImageResource(mImageIds[position]);
+        Glide
+                .with(imageView.getContext())
+                .load(mImageIds[position])
+                .apply(new RequestOptions().override(450,800).fitCenter())
+                .into(imageView);
+
         container.addView(imageView, 0);
         return imageView;
+
+        /*Glide
+                .with(imageCategory_view.getContext())
+                .load(item.getImageCategory())
+                .apply(new RequestOptions().override(575,345).fitCenter())
+                .into(imageCategory_view);*/
     }
 
     @Override

@@ -9,7 +9,7 @@ import com.arnauac.vienaapp.R;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-class CategoryItemHolder extends RecyclerView.ViewHolder{
+class   CategoryItemHolder extends RecyclerView.ViewHolder{
     private TextView nameCategory_view;
     private ImageView imageCategory_view;
 
