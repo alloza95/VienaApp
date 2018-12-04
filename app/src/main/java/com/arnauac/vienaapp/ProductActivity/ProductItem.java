@@ -1,4 +1,4 @@
-package com.arnauac.vienaapp;
+package com.arnauac.vienaapp.ProductActivity;
 
 public class ProductItem {
     private String nameProduct;

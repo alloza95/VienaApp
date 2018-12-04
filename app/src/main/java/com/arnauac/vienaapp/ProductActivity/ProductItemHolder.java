@@ -1,9 +1,12 @@
-package com.arnauac.vienaapp;
+package com.arnauac.vienaapp.ProductActivity;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.arnauac.vienaapp.ProductActivity.ProductItem;
+import com.arnauac.vienaapp.R;
 
 public class ProductItemHolder extends RecyclerView.ViewHolder{
     private TextView nameProduct_view;

@@ -14,6 +14,8 @@ import java.util.List;
 public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder> {
     private FragmentActivity mContext;
     private List<CategoryItem> items;
+    private OnClickListener onClickListener;
+
 
     CategoryItemAdapter(FragmentActivity mContext, List<CategoryItem> items) {
         this.mContext = mContext;
@@ -24,7 +26,7 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder
     @Override
     public CategoryItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_category, parent, false);
-        return new CategoryItemHolder(itemView);
+        return new CategoryItemHolder(itemView, onClickListener);
     }
 
     @Override
@@ -35,5 +37,11 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder
     @Override
     public int getItemCount() {
         return items.size();
+    }
+    public void setOnClickListener(OnClickListener listener) {
+        this.onClickListener = listener;
+    }
+    public interface OnClickListener {
+        void onClick(int position);
     }
 }
