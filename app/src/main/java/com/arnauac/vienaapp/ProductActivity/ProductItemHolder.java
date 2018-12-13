@@ -4,6 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import com.arnauac.vienaapp.ProductActivity.ProductItem;
 import com.arnauac.vienaapp.R;
@@ -21,6 +23,13 @@ public class ProductItemHolder extends RecyclerView.ViewHolder{
 
     void bind(ProductItem item){
         nameProduct_view.setText(item.getNameProduct());
-        imageProduct_view.setImageResource(item.getImageProduct());
+        Glide
+                .with(imageProduct_view.getContext())
+                .load(item.getImageProduct())
+                .apply(new RequestOptions().override(575,345).fitCenter())
+                .into(imageProduct_view);
     }
 }
+
+
+
