@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "655699353212",
+    "firebase_url": "https://androidprojectviena.firebaseio.com",
+    "project_id": "androidprojectviena",
+    "storage_bucket": "androidprojectviena.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655699353212:android:07506f4467999381",
+        "android_client_info": {
+          "package_name": "com.arnauac.vienaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655699353212-5jtv0uflj8t19mk4ba7lueefhm616gko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arnauac.vienaapp",
+            "certificate_hash": "4e64f6aba6a9266290a342596f3f68fdeb2b2dc1"
+          }
+        },
+        {
+          "client_id": "655699353212-m1e3gurbc9d123nd6avfjgo67j7hpg8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE5YdmRMRo-RZqWg_Zd0MvNE-WPgHLVhA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655699353212-m1e3gurbc9d123nd6avfjgo67j7hpg8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

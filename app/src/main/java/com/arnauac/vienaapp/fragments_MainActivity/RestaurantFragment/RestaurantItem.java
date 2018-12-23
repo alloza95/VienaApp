@@ -5,7 +5,7 @@ class RestaurantItem {
     private String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant;
     private ServicesItem services;
 
-    RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, ServicesItem servicesItem) {
+    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, ServicesItem servicesItem) {
         this.nameRestaurant = nameRestaurant;
         this.streetRestaurant = streetRestaurant;
         this.numberRestaurant = numberRestaurant;
@@ -14,27 +14,27 @@ class RestaurantItem {
         this.services = servicesItem;
     }
 
-    String getNameRestaurant() {
+    public String getNameRestaurant() {
         return nameRestaurant;
     }
 
-    String getStreetRestaurant() {
+    public String getStreetRestaurant() {
         return streetRestaurant;
     }
 
-    String getNumberRestaurant() {
+    public String getNumberRestaurant() {
         return numberRestaurant;
     }
 
-    String getCodepostRestaurant() {
+    public String getCodepostRestaurant() {
         return codepostRestaurant;
     }
 
-    String getTownRestaurant() {
+    public String getTownRestaurant() {
         return townRestaurant;
     }
 
-    ServicesItem getServices() {
+    public ServicesItem getServices() {
         return services;
     }
 }

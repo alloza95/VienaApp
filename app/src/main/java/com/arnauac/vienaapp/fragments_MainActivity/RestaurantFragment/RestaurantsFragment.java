@@ -14,6 +14,10 @@ import android.view.ViewGroup;
 
 import com.arnauac.vienaapp.R;
 import com.arnauac.vienaapp.RestaurantActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +26,9 @@ public class RestaurantsFragment extends Fragment {
 
     //Model
     List<RestaurantItem> items;
-    public static final int RES = 0;
+    private RestaurantItemAdapter adapter;
+    private RecyclerView recyclerView;
+
 
     @Nullable
     @Override
@@ -30,6 +36,7 @@ public class RestaurantsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_restaurants, container, false);
 
         items = new ArrayList<>();
+
         items.add(new RestaurantItem(
                 "Can Solà",
                 "Carrer de Can Solà" + ",",
@@ -89,8 +96,8 @@ public class RestaurantsFragment extends Fragment {
 
 
         //Referències a elements de la pantalla
-        RecyclerView recyclerView = view.findViewById(R.id.listRestaurant);
-        RestaurantItemAdapter adapter = new RestaurantItemAdapter(this.getContext(), items);
+        recyclerView = view.findViewById(R.id.listRestaurant);
+        adapter = new RestaurantItemAdapter(this.getContext(), items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         recyclerView.addItemDecoration(
