@@ -1,9 +1,13 @@
 package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
 class ServicesItem {
-    private Boolean wifi, terrace, autoViena, parking, playground;
+    Boolean wifi, terrace, autoViena, parking, playground;
 
-    ServicesItem(Boolean wifi, Boolean terrace, Boolean autoViena, Boolean parking, Boolean playground) {
+    public ServicesItem(){
+
+    }
+
+    public ServicesItem(Boolean wifi, Boolean terrace, Boolean autoViena, Boolean parking, Boolean playground) {
         this.wifi = wifi;
         this.terrace = terrace;
         this.autoViena = autoViena;
@@ -11,23 +15,23 @@ class ServicesItem {
         this.playground = playground;
     }
 
-    Boolean getWifi() {
+    public Boolean getWifi() {
         return wifi;
     }
 
-    Boolean getTerrace() {
+    public Boolean getTerrace() {
         return terrace;
     }
 
-    Boolean getAutoViena() {
+    public Boolean getAutoViena() {
         return autoViena;
     }
 
-    Boolean getParking() {
+    public Boolean getParking() {
         return parking;
     }
 
-    Boolean getPlayground() {
+    public Boolean getPlayground() {
         return playground;
     }
 }

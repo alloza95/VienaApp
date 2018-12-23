@@ -38,10 +38,12 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
     }
 
     void bind(RestaurantItem item) {
+        String street = item.getStreetRestaurant() + ", ";
+        String codepostal = item.getCodepostRestaurant() + ", ";
         nameRestaurant_view.setText(item.getNameRestaurant());
-        streetRestaurant_view.setText(item.getStreetRestaurant());
+        streetRestaurant_view.setText(street);
         numberRestaurant_view.setText(item.getNumberRestaurant());
-        codepostRestaurant_view.setText(item.getCodepostRestaurant());
+        codepostRestaurant_view.setText(codepostal);
         townRestaurant_view.setText(item.getTownRestaurant());
 
         if (item.getServices().getWifi()){

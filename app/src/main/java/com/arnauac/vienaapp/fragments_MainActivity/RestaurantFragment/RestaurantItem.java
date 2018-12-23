@@ -2,8 +2,12 @@ package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
 class RestaurantItem {
 
-    private String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant;
-    private ServicesItem services;
+     String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant;
+     ServicesItem services;
+
+     public RestaurantItem(){
+
+     }
 
     public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, ServicesItem servicesItem) {
         this.nameRestaurant = nameRestaurant;

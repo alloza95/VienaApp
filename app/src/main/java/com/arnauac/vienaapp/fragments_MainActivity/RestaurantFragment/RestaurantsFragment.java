@@ -37,64 +37,6 @@ public class RestaurantsFragment extends Fragment {
 
         items = new ArrayList<>();
 
-        items.add(new RestaurantItem(
-                "Can Solà",
-                "Carrer de Can Solà" + ",",
-                " " + "1",
-                "08173" + ",",
-                " " + "Sant Cugat del Vallès",
-                new ServicesItem(
-                        true,
-                        true,
-                        true,
-                        true,
-                        false
-                )
-        ));
-        items.add(new RestaurantItem(
-                "Xalet Sant Cugat",
-                "Passeig de Ca n'Ametller" + ",",
-                " " + "1-3",
-                "08173" + ",",
-                " " + "Sant Cugat del Vallès",
-                new ServicesItem(
-                        true,
-                        true,
-                        true,
-                        true,
-                        false
-                )
-        ));
-        items.add(new RestaurantItem(
-                "Cabrera",
-                "Carretera N-11" + ",",
-                " " + "km 643",
-                "04171" + ",",
-                " " + "Cabrera de Mar",
-                new ServicesItem(
-                        true,
-                        true,
-                        true,
-                        true,
-                        true
-                )
-        ));
-        items.add(new RestaurantItem(
-                "Parc Vallès",
-                "Av. Tèxtil" + ",",
-                " " + "s/n",
-                "08223" + ",",
-                " " + "Terrassa",
-                new ServicesItem(
-                        true,
-                        true,
-                        false,
-                        true,
-                        false
-                )
-        ));
-
-
         //Referències a elements de la pantalla
         recyclerView = view.findViewById(R.id.listRestaurant);
         adapter = new RestaurantItemAdapter(this.getContext(), items);
@@ -111,6 +53,25 @@ public class RestaurantsFragment extends Fragment {
             public void onClick(int position) {
                 Intent intent = new Intent(getActivity(), RestaurantActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        database.getReference("restaurants").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                items.removeAll(items);
+                for (DataSnapshot snapshot :
+                        dataSnapshot.getChildren()){
+                    RestaurantItem restaurant = snapshot.getValue(RestaurantItem.class);
+                    items.add(restaurant);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
 
