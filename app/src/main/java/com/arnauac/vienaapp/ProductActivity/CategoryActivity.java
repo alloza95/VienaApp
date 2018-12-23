@@ -7,8 +7,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.arnauac.vienaapp.R;
+import com.arnauac.vienaapp.RestaurantActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,7 @@ public class CategoryActivity extends AppCompatActivity {
 
     //Referències a elements de la pantalla
     private RecyclerView recyclerView;
+    private List<String> products;
     private ProductItemAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,13 +91,26 @@ public class CategoryActivity extends AppCompatActivity {
             items.add(new ProductItem("Patates", R.drawable.cat_05_patates));
 
         }
-        recyclerView = findViewById(R.id.listProducts);
+
+
+        RecyclerView recyclerView = findViewById(R.id.listProducts);
         adapter = new ProductItemAdapter(this, items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         recyclerView.setAdapter(adapter);
+
+
+
+
+
+
+
+
+
+
+
     }
+
     @Override
     public boolean onOptionsItemSelected (MenuItem item){
         int id = item.getItemId();
