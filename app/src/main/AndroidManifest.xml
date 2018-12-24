@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProductActivity.CategoryActivity" />
-        <activity android:name=".RestaurantActivity" />
+        <activity android:name=".fragments_MainActivity.RestaurantFragment.RestaurantActivity" />
 
 
         <activity android:name=".Detail_product">

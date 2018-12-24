@@ -1,20 +1,26 @@
 package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
-class RestaurantItem {
+import java.io.Serializable;
 
-     String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant;
+class RestaurantItem implements Serializable {
+
+     String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant, telephonRestaurant;
+     String horaryRestaurant, descriptionRestaurant;
      ServicesItem services;
 
      public RestaurantItem(){
 
      }
 
-    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, ServicesItem servicesItem) {
+    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, String telephonRestaurant, String horaryRestaurant, String descriptionRestaurant, ServicesItem servicesItem) {
         this.nameRestaurant = nameRestaurant;
         this.streetRestaurant = streetRestaurant;
         this.numberRestaurant = numberRestaurant;
         this.codepostRestaurant = codepostRestaurant;
         this.townRestaurant = townRestaurant;
+        this.telephonRestaurant = telephonRestaurant;
+        this.horaryRestaurant = horaryRestaurant;
+        this.descriptionRestaurant = descriptionRestaurant;
         this.services = servicesItem;
     }
 
@@ -40,5 +46,17 @@ class RestaurantItem {
 
     public ServicesItem getServices() {
         return services;
+    }
+
+    public String getTelephonRestaurant() {
+        return telephonRestaurant;
+    }
+
+    public String getHoraryRestaurant() {
+        return horaryRestaurant;
+    }
+
+    public String getDescriptionRestaurant() {
+        return descriptionRestaurant;
     }
 }

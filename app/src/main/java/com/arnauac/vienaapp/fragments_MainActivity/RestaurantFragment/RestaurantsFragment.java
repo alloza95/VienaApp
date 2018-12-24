@@ -13,13 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.arnauac.vienaapp.R;
-import com.arnauac.vienaapp.RestaurantActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.Constants;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,11 +47,9 @@ public class RestaurantsFragment extends Fragment {
             @Override
             public void onClick(int position) {
                 Intent intent = new Intent(getActivity(), RestaurantActivity.class);
-                intent.putExtra("name", items.get(position).nameRestaurant);
-                intent.putExtra("street", items.get(position).streetRestaurant);
-                intent.putExtra("number", items.get(position).numberRestaurant);
-                intent.putExtra("codepost", items.get(position).codepostRestaurant);
-                intent.putExtra("town", items.get(position).townRestaurant);
+                RestaurantItem restaurant = items.get(position);
+                intent.putExtra("itemRestaurant", restaurant);
+
                 startActivity(intent);
             }
         });

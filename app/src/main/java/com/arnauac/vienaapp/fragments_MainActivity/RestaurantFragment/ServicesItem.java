@@ -1,6 +1,8 @@
 package com.arnauac.vienaapp.fragments_MainActivity.RestaurantFragment;
 
-class ServicesItem {
+import java.io.Serializable;
+
+class ServicesItem implements Serializable {
     Boolean wifi, terrace, autoViena, parking, playground;
 
     public ServicesItem(){
