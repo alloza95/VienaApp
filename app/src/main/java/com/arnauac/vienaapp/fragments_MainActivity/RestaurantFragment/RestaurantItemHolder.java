@@ -46,6 +46,8 @@ class RestaurantItemHolder extends RecyclerView.ViewHolder {
         codepostRestaurant_view.setText(codepostal);
         townRestaurant_view.setText(item.getTownRestaurant());
 
+        linearLayout.removeAllViewsInLayout();
+
         if (item.getServices().getWifi()){
             createIcon(R.drawable.ic_wifi_connection_signal_symbol);
         }
