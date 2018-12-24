@@ -18,17 +18,16 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.core.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RestaurantsFragment extends Fragment {
 
-    //Model
     List<RestaurantItem> items;
     private RestaurantItemAdapter adapter;
     private RecyclerView recyclerView;
-
 
     @Nullable
     @Override
@@ -36,8 +35,6 @@ public class RestaurantsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_restaurants, container, false);
 
         items = new ArrayList<>();
-
-        //Referències a elements de la pantalla
         recyclerView = view.findViewById(R.id.listRestaurant);
         adapter = new RestaurantItemAdapter(this.getContext(), items);
 
@@ -48,10 +45,14 @@ public class RestaurantsFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         adapter.setOnClickListener(new RestaurantItemAdapter.OnClickListener() {
-
             @Override
             public void onClick(int position) {
                 Intent intent = new Intent(getActivity(), RestaurantActivity.class);
+                intent.putExtra("name", items.get(position).nameRestaurant);
+                intent.putExtra("street", items.get(position).streetRestaurant);
+                intent.putExtra("number", items.get(position).numberRestaurant);
+                intent.putExtra("codepost", items.get(position).codepostRestaurant);
+                intent.putExtra("town", items.get(position).townRestaurant);
                 startActivity(intent);
             }
         });
