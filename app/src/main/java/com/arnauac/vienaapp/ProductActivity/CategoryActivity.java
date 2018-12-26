@@ -7,13 +7,18 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
+import com.arnauac.vienaapp.Detail_product;
 import com.arnauac.vienaapp.R;
+import com.arnauac.vienaapp.fragments_MainActivity.MenuFragment.CategoryItemAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
+    private Button btn;
 
     //Model
     List<ProductItem> items;
@@ -90,22 +95,36 @@ public class CategoryActivity extends AppCompatActivity {
 
         }
 
-
+    //Referències a elements de la pantalla
         RecyclerView recyclerView = findViewById(R.id.listProducts);
-        adapter = new ProductItemAdapter(this, items);
-
+        ProductItemAdapter adapter = new ProductItemAdapter(this, items);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         recyclerView.setAdapter(adapter);
 
+       adapter.setOnClickListener(new ProductItemAdapter.OnClickListener() {
+           @Override
+           public void onClick(int position) {
+               Intent intent = new Intent(CategoryActivity.this, Detail_product.class);
+               intent.putExtra("nameProduct", items.get(position).getNameProduct());
+               startActivity(intent);
+
+           }
+       });
 
 
 
 
 
+        btn = findViewById(R.id.button);
 
 
 
 
+
+    }
+
+    public void openActivity(){
 
     }
 

@@ -10,15 +10,25 @@ import com.bumptech.glide.request.RequestOptions;
 import com.arnauac.vienaapp.ProductActivity.ProductItem;
 import com.arnauac.vienaapp.R;
 
-public class ProductItemHolder extends RecyclerView.ViewHolder{
+class ProductItemHolder extends RecyclerView.ViewHolder{
     private TextView nameProduct_view;
     private ImageView imageProduct_view;
 
-    public ProductItemHolder(View itemView) {
+    ProductItemHolder(View itemView, final ProductItemAdapter.OnClickListener onClickListener) {
         super(itemView);
         nameProduct_view = itemView.findViewById(R.id.productName_view);
         imageProduct_view = itemView.findViewById(R.id.productImage_view);
         imageProduct_view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onClickListener != null) {
+                    int pos = getAdapterPosition();
+                    onClickListener.onClick(pos);
+                }
+            }
+        });
     }
 
     void bind(ProductItem item){

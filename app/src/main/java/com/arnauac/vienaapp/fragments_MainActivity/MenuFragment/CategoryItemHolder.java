@@ -29,8 +29,6 @@ class   CategoryItemHolder extends RecyclerView.ViewHolder{
             }
         });
 
-
-
     }
 
 

@@ -14,6 +14,8 @@ import java.util.List;
 public class ProductItemAdapter extends RecyclerView.Adapter<ProductItemHolder> {
     private Context mContext;
     private List<ProductItem> items;
+    private OnClickListener onClickListener;
+
 
     public ProductItemAdapter(Context mContext, List<ProductItem> items) {
         this.mContext = mContext;
@@ -24,7 +26,7 @@ public class ProductItemAdapter extends RecyclerView.Adapter<ProductItemHolder> 
     @Override
     public ProductItemHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_product, parent, false);
-        return new ProductItemHolder(itemView);
+        return new ProductItemHolder(itemView, onClickListener);
     }
 
     @Override
@@ -35,6 +37,12 @@ public class ProductItemAdapter extends RecyclerView.Adapter<ProductItemHolder> 
     @Override
     public int getItemCount() {
         return items.size();
+    }
+    public void setOnClickListener(OnClickListener listener) {
+        this.onClickListener = listener;
+    }
+    public interface OnClickListener {
+        void onClick(int position);
     }
 
 
