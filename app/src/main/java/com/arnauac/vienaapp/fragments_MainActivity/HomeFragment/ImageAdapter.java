@@ -14,7 +14,7 @@ import com.bumptech.glide.request.RequestOptions;
 
 public class ImageAdapter extends PagerAdapter {
     private FragmentActivity mContext;
-    private int[] mImageIds = new int[]{R.drawable.home_01, R.drawable.home_02, R.drawable.home_03, R.drawable.home_04, R.drawable.home_05 };
+    private int[] mImageIds = new int[]{R.drawable.home_01, R.drawable.home_02, R.drawable.home_03, R.drawable.home_04, R.drawable.home_05, R.drawable.home_06, R.drawable.home_07 };
 
     public ImageAdapter(FragmentActivity context){
         mContext = context;

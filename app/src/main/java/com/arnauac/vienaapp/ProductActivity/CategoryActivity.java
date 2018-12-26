@@ -47,7 +47,7 @@ public class CategoryActivity extends AppCompatActivity {
         if (text.equals("Coques")) {
             items = new ArrayList<>();
             items.add(new ProductItem("Alpino", R.drawable.coq01_alpino));
-            items.add(new ProductItem("Remy", R.drawable.coq02_remy));
+            items.add(new ProductItem("Rémy", R.drawable.coq02_remy));
             items.add(new ProductItem("Porchetta", R.drawable.coq03_porchetta));
             items.add(new ProductItem("Lorraine", R.drawable.coq04_lorraine));
 
@@ -66,7 +66,7 @@ public class CategoryActivity extends AppCompatActivity {
             items = new ArrayList<>();
             items.add(new ProductItem("Strongonov", R.drawable.flauta01_strogonov));
             items.add(new ProductItem("Britània", R.drawable.flauta02_britania));
-            items.add(new ProductItem("Ibèric de gla", R.drawable.flauta03_ibericagla));
+            items.add(new ProductItem("Ibèric de glà", R.drawable.flauta03_ibericagla));
             items.add(new ProductItem("Norvègia", R.drawable.flauta04_norvegia));
 
 
@@ -116,7 +116,7 @@ public class CategoryActivity extends AppCompatActivity {
 
 
 
-        btn = findViewById(R.id.button);
+
 
 
 

@@ -1,5 +1,6 @@
 package com.arnauac.vienaapp;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,12 +28,16 @@ public class Detail_product extends AppCompatActivity {
 
        ;
 
-        String text = "Britània";
+
         String titols = " ";
         String subtitols = " ";
         String descriptions = " ";
         String conclusios = " ";
         String imgs = " ";
+
+        Intent intent = getIntent();
+        String text = intent.getStringExtra("nameProduct");
+        getSupportActionBar().setTitle(text);
 
         if (text.equals("Piri Piri")) {
             titols = "Piri Piri";
