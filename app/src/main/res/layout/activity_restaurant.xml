@@ -35,6 +35,7 @@
     </android.support.v7.widget.Toolbar>
 
     <!-- Toolbar's Shadow -->
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
@@ -51,182 +52,193 @@
 
     </FrameLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        tools:layout_editor_absoluteY="56dp">
-
-        <ImageView
-            android:id="@+id/rImage_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="0dp"
-            app:layout_constraintDimensionRatio="16:9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@color/grey_font" />
-
-        <TextView
-            android:id="@+id/rName_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Nom Restaurant"
-            android:textColor="@color/colorPrimary"
-            android:textSize="24sp"
-            app:fontFamily="@font/abril_fatface"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rImage_view" />
-
-        <TextView
-            android:id="@+id/rStreet_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Carrer, "
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rName_view" />
-
-        <TextView
-            android:id="@+id/rNumber_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Número"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintStart_toEndOf="@+id/rStreet_view"
-            app:layout_constraintTop_toBottomOf="@+id/rName_view" />
-
-        <TextView
-            android:id="@+id/rCodepostal_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:text="Codi Postal, "
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rStreet_view" />
-
-        <TextView
-            android:id="@+id/rTown_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Municipi"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintStart_toEndOf="@+id/rCodepostal_view"
-            app:layout_constraintTop_toBottomOf="@+id/rNumber_view" />
-
-        <TextView
-            android:id="@+id/rTelephon_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:text="Telèfon"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rCodepostal_view" />
-
-        <TextView
-            android:id="@+id/horary_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Horari:"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp"
-            app:fontFamily="@font/roboto_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rTelephon_view" />
-
-        <TextView
-            android:id="@+id/rHoraryDescription_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="Descripció horari"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horary_label" />
-
-        <TextView
-            android:id="@+id/description_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="Descripció:"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp"
-            app:fontFamily="@font/roboto_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rHoraryDescription_view" />
-
-        <TextView
-            android:id="@+id/rDescription_view"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="Descripció restaurant"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="12sp"
-            app:fontFamily="@font/roboto"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description_label" />
+        android:layout_alignTop="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
-            android:id="@+id/services_linearLayout"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rDescription_view" />
+            android:orientation="vertical">
 
-    </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteY="56dp">
+
+                <ImageView
+                    android:id="@+id/rImage_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintDimensionRatio="16:9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@color/grey_font" />
+
+                <TextView
+                    android:id="@+id/rName_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Nom Restaurant"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/abril_fatface"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rImage_view" />
+
+                <TextView
+                    android:id="@+id/rStreet_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Carrer, "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rName_view" />
+
+                <TextView
+                    android:id="@+id/rNumber_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Número"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintStart_toEndOf="@+id/rStreet_view"
+                    app:layout_constraintTop_toBottomOf="@+id/rName_view" />
+
+                <TextView
+                    android:id="@+id/rCodepostal_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Codi Postal, "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rStreet_view" />
+
+                <TextView
+                    android:id="@+id/rTown_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Municipi"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintStart_toEndOf="@+id/rCodepostal_view"
+                    app:layout_constraintTop_toBottomOf="@+id/rNumber_view" />
+
+                <TextView
+                    android:id="@+id/rTelephon_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Telèfon"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rCodepostal_view" />
+
+                <TextView
+                    android:id="@+id/horary_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Horari:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rTelephon_view" />
+
+                <TextView
+                    android:id="@+id/rHoraryDescription_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Descripció horari"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horary_label" />
+
+                <TextView
+                    android:id="@+id/description_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Descripció:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/roboto_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rHoraryDescription_view" />
+
+                <TextView
+                    android:id="@+id/rDescription_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Descripció restaurant"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/roboto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_label" />
+
+                <LinearLayout
+                    android:id="@+id/services_linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="32dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rDescription_view" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
