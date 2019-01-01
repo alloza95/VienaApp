@@ -74,10 +74,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="Recepta anglosaxona reinterpretada al nostre estil"
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                android:text="Recepta anglosaxona reinterpretada al nostre estil" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -86,11 +83,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:srcCompat="@drawable/floritura_viena" />
+                app:layout_constraintHorizontal_bias="0.0" />
 
             <TextView
                 android:id="@+id/descripcio"
@@ -99,8 +92,6 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="És una de les nostres receptes estrella. Elaborada amb 130gr de vedella (coll d'agulla, una de les parts més nobles de la vedella) d'elaboració pròpia, combinada amb bacon a la planxa també d'elaboració pròpia, ou, tomàquet i espincas. Tots els ingredients s'acompanyen amb amionesa al pebre que aporta un lleuger to picant i atorga amorositat a la recepta. El pa es rodói d'elaboració pròpia"
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
             <TextView
@@ -110,8 +101,6 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="La combinaci´o dels Ingredients ofereix un resultat d'alló més gustós i consistent, Ideal per a aàpts principals scroll scrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll "
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         </LinearLayout>

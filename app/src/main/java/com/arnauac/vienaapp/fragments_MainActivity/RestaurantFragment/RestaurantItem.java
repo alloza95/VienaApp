@@ -5,14 +5,14 @@ import java.io.Serializable;
 class RestaurantItem implements Serializable {
 
      String nameRestaurant, streetRestaurant, numberRestaurant, codepostRestaurant, townRestaurant, telephonRestaurant;
-     String horaryRestaurant, descriptionRestaurant;
+     String horaryRestaurant, descriptionRestaurant, imageRestaurant;
      ServicesItem services;
 
      public RestaurantItem(){
 
      }
 
-    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, String telephonRestaurant, String horaryRestaurant, String descriptionRestaurant, ServicesItem servicesItem) {
+    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, String telephonRestaurant, String horaryRestaurant, String descriptionRestaurant, String imageRestaurant, ServicesItem servicesItem) {
         this.nameRestaurant = nameRestaurant;
         this.streetRestaurant = streetRestaurant;
         this.numberRestaurant = numberRestaurant;
@@ -21,6 +21,7 @@ class RestaurantItem implements Serializable {
         this.telephonRestaurant = telephonRestaurant;
         this.horaryRestaurant = horaryRestaurant;
         this.descriptionRestaurant = descriptionRestaurant;
+        this.imageRestaurant = imageRestaurant;
         this.services = servicesItem;
     }
 
@@ -58,5 +59,9 @@ class RestaurantItem implements Serializable {
 
     public String getDescriptionRestaurant() {
         return descriptionRestaurant;
+    }
+
+    public String getImageRestaurant() {
+        return imageRestaurant;
     }
 }

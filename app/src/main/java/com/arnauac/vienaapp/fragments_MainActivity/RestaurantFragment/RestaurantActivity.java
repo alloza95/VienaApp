@@ -7,12 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.arnauac.vienaapp.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 public class RestaurantActivity extends AppCompatActivity {
 
@@ -33,7 +34,7 @@ public class RestaurantActivity extends AppCompatActivity {
         TextView rTelephon_view = findViewById(R.id.rTelephon_view);
         TextView rHorary_view = findViewById(R.id.rHoraryDescription_view);
         TextView rDescription_view = findViewById(R.id.rDescription_view);
-
+        ImageView rImage_view = findViewById(R.id.rImage_view);
         linearLayout = findViewById(R.id.services_linearLayout);
 
         RestaurantItem restaurant = (RestaurantItem) getIntent().getSerializableExtra("itemRestaurant");
@@ -46,6 +47,9 @@ public class RestaurantActivity extends AppCompatActivity {
         rTelephon_view.setText(restaurant.telephonRestaurant);
         rHorary_view.setText(restaurant.horaryRestaurant);
         rDescription_view.setText(restaurant.descriptionRestaurant);
+        Glide.with(this).load(restaurant.imageRestaurant).apply(RequestOptions.centerCropTransform()).into(rImage_view);
+
+        linearLayout.removeAllViewsInLayout();
 
         if (restaurant.getServices().getWifi()){
             createIcon(R.drawable.ic_wifi_connection_signal_symbol, "WIFI");
@@ -73,12 +77,14 @@ public class RestaurantActivity extends AppCompatActivity {
 
     private void createIcon(int image, String text) {
 
+        //LinearLayout vertical
         LinearLayout vertical_LinearLayout = new LinearLayout(this);
         LinearLayout.LayoutParams verLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         verLayoutParams.weight = 1;
         vertical_LinearLayout.setLayoutParams(verLayoutParams);
         vertical_LinearLayout.setOrientation(LinearLayout.VERTICAL);
 
+        //icone
         ImageView imageView = new ImageView(this);
         imageView.setImageResource(image);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(70, 70);
@@ -86,6 +92,7 @@ public class RestaurantActivity extends AppCompatActivity {
         imageView.setColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
         imageView.setLayoutParams(layoutParams);
 
+        //text
         TextView textView = new TextView(this);
         textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         textView.setGravity(Gravity.CENTER);
@@ -93,9 +100,11 @@ public class RestaurantActivity extends AppCompatActivity {
         textView.setTextColor(ContextCompat.getColor(this, R.color.colorPrimary));
         textView.setTextSize(10);
 
+        //Afegim icone i text al LinearLayout vertical
         vertical_LinearLayout.addView(imageView);
         vertical_LinearLayout.addView(textView);
 
+        //Afegim el LinearLayout vertical al LinearLayout principal
         linearLayout.addView(vertical_LinearLayout);
     }
 }
