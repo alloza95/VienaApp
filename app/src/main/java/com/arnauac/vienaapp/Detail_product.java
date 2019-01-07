@@ -32,7 +32,7 @@ public class Detail_product extends AppCompatActivity {
         Glide
                 .with(this)
                 .load(product.getImageProduct())
-                .apply(new RequestOptions().override(575,345).fitCenter())
+                .apply(new RequestOptions().override(575,345).centerCrop())
                 .into(img);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
