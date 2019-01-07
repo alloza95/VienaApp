@@ -37,7 +37,7 @@ class   CategoryItemHolder extends RecyclerView.ViewHolder{
         Glide
                 .with(imageCategory_view.getContext())
                 .load(item.getImageCategory())
-                .apply(new RequestOptions().override(575,345).fitCenter())
+                .apply(new RequestOptions().fitCenter())
                 .into(imageCategory_view);
     }
 

@@ -94,15 +94,6 @@
                 android:text="És una de les nostres receptes estrella. Elaborada amb 130gr de vedella (coll d'agulla, una de les parts més nobles de la vedella) d'elaboració pròpia, combinada amb bacon a la planxa també d'elaboració pròpia, ou, tomàquet i espincas. Tots els ingredients s'acompanyen amb amionesa al pebre que aporta un lleuger to picant i atorga amorositat a la recepta. El pa es rodói d'elaboració pròpia"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-            <TextView
-                android:id="@+id/conclusio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:text="La combinaci´o dels Ingredients ofereix un resultat d'alló més gustós i consistent, Ideal per a aàpts principals scroll scrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll scrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscrollscroll "
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
         </LinearLayout>
     </ScrollView>
 

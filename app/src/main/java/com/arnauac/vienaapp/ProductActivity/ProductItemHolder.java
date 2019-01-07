@@ -36,10 +36,7 @@ class ProductItemHolder extends RecyclerView.ViewHolder{
         Glide
                 .with(imageProduct_view.getContext())
                 .load(item.getImageProduct())
-                .apply(new RequestOptions().override(575,345).fitCenter())
+                .apply(new RequestOptions().fitCenter())
                 .into(imageProduct_view);
     }
 }
-
-
-
