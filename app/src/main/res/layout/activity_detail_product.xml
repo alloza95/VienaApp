@@ -20,44 +20,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imatge"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@color/grey_font"/>
+
     <ScrollView
+        android:id="@+id/scrollView_Product"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/imatge">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imatge"
-                android:layout_width="match_parent"
-                android:layout_height="204dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
             <TextView
                 android:id="@+id/titol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
                 android:gravity="center_horizontal"
                 android:text="Hamburgesa Oxbridge"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorPrimary"
                 android:textSize="25dp"
                 app:fontFamily="@font/abril_fatface"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -68,22 +62,22 @@
                 android:id="@+id/subtitol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="Recepta anglosaxona reinterpretada al nostre estil" />
+                android:layout_marginBottom="8dp"
+                android:textSize="12dp"
+                android:text="Recepta anglosaxona reinterpretada al nostre estil"
+                android:textColor="@color/colorPrimaryDark" />
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="16dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintHorizontal_bias="0.0" />
+                android:id="@+id/floritura"
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:contentDescription="TODO"
+                android:tint="@color/colorPrimaryDark"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:srcCompat="@drawable/ic_floritura_viena_svg"
+                tools:ignore="VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/descripcio"
@@ -92,7 +86,9 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="És una de les nostres receptes estrella. Elaborada amb 130gr de vedella (coll d'agulla, una de les parts més nobles de la vedella) d'elaboració pròpia, combinada amb bacon a la planxa també d'elaboració pròpia, ou, tomàquet i espincas. Tots els ingredients s'acompanyen amb amionesa al pebre que aporta un lleuger to picant i atorga amorositat a la recepta. El pa es rodói d'elaboració pròpia"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/floritura" />
 
         </LinearLayout>
     </ScrollView>

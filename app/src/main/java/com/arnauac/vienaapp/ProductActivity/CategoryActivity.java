@@ -83,7 +83,6 @@ public class CategoryActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     @Override
