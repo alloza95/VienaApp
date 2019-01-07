@@ -8,13 +8,6 @@ public class ProductItem implements Serializable {
     public ProductItem() {
     }
 
-    public ProductItem(String nameProduct, String imageProduct, String subtitleProduct, String descriptionProduct) {
-        this.nameProduct = nameProduct;
-        this.imageProduct = imageProduct;
-        this.subtitleProduct = subtitleProduct;
-        this.descriptionProduct = descriptionProduct;
-    }
-
     public String getNameProduct() {
         return nameProduct;
     }

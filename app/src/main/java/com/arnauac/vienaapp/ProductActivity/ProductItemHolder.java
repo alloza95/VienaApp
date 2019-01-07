@@ -4,11 +4,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.arnauac.vienaapp.R;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-
-import com.arnauac.vienaapp.ProductActivity.ProductItem;
-import com.arnauac.vienaapp.R;
 
 class ProductItemHolder extends RecyclerView.ViewHolder{
     private TextView nameProduct_view;

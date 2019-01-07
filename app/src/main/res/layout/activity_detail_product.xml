@@ -26,15 +26,17 @@
             android:src="@drawable/ic_arrow_back_black_24dp"
             android:tint="@android:color/white"
             android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/boto_tornar" />
 
         <TextView
             android:id="@+id/name_product_toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Oxbridge"
+            android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:textColor="@android:color/white"/>
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="14dp" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -65,7 +67,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@color/grey_font"/>
+        app:srcCompat="@color/grey_font"
+        android:contentDescription="@string/imatge_del_producte" />
 
     <ScrollView
         android:id="@+id/scrollView_Product"
@@ -86,30 +89,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Hamburgesa Oxbridge"
                 android:textColor="@color/colorPrimary"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 app:fontFamily="@font/abril_fatface"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imatge" />
+                app:layout_constraintTop_toBottomOf="@+id/imatge"
+                tools:text="Hamburgesa Oxbridge" />
 
             <TextView
                 android:id="@+id/subtitol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginBottom="8dp"
-                android:textSize="12dp"
-                android:text="Recepta anglosaxona reinterpretada al nostre estil"
-                android:textColor="@color/colorPrimaryDark" />
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                tools:text="Recepta anglosaxona reinterpretada al nostre estil" />
 
             <ImageView
                 android:id="@+id/floritura"
                 android:layout_width="60dp"
                 android:layout_height="10dp"
                 android:layout_gravity="center"
-                android:contentDescription="TODO"
                 android:tint="@color/colorPrimaryDark"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:srcCompat="@drawable/ic_floritura_viena_svg"
@@ -119,12 +121,14 @@
                 android:id="@+id/descripcio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
                 android:gravity="center"
-                android:text="És una de les nostres receptes estrella. Elaborada amb 130gr de vedella (coll d'agulla, una de les parts més nobles de la vedella) d'elaboració pròpia, combinada amb bacon a la planxa també d'elaboració pròpia, ou, tomàquet i espincas. Tots els ingredients s'acompanyen amb amionesa al pebre que aporta un lleuger to picant i atorga amorositat a la recepta. El pa es rodói d'elaboració pròpia"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@+id/floritura" />
+                app:layout_constraintTop_toBottomOf="@+id/floritura"
+                tools:text="És una de les nostres receptes estrella. Elaborada amb 130gr de vedella (coll d'agulla, una de les parts més nobles de la vedella) d'elaboració pròpia, combinada amb bacon a la planxa també d'elaboració pròpia, ou, tomàquet i espincas. Tots els ingredients s'acompanyen amb amionesa al pebre que aporta un lleuger to picant i atorga amorositat a la recepta. El pa es rodói d'elaboració pròpia" />
 
         </LinearLayout>
     </ScrollView>

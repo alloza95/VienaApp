@@ -23,14 +23,16 @@
             android:src="@drawable/ic_arrow_back_black_24dp"
             android:tint="@android:color/white"
             android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/boto_tornar" />
 
         <TextView
+            android:id="@+id/toolbar_name_restaurant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Restaurants"
+            android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:textColor="@android:color/white"/>
+            tools:text="Restaurants" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -77,7 +79,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@color/grey_font" />
+                    app:srcCompat="@color/grey_font"
+                    android:contentDescription="@string/imatge_del_restaurant" />
 
                 <TextView
                     android:id="@+id/rName_view"
@@ -86,7 +89,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Nom Restaurant"
+                    tools:text="Nom Restaurant"
                     android:textColor="@color/colorPrimary"
                     android:textSize="24sp"
                     app:fontFamily="@font/abril_fatface"
@@ -100,7 +103,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Carrer, "
+                    tools:text="Carrer, "
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"
@@ -112,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Número"
+                    tools:text="Número"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"
@@ -126,7 +129,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
-                    android:text="Codi Postal, "
+                    tools:text="Codi Postal, "
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"
@@ -138,7 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Municipi"
+                    tools:text="Municipi"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"
@@ -152,7 +155,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="4dp"
-                    android:text="Telèfon"
+                    tools:text="Telèfon"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"
@@ -166,7 +169,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Horari:"
+                    tools:text="Horari:"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     app:fontFamily="@font/roboto_bold"
@@ -182,7 +185,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="Descripció horari"
+                    tools:text="Descripció horari"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"
@@ -197,7 +200,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Descripció:"
+                    tools:text="Descripció:"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     app:fontFamily="@font/roboto_bold"
@@ -213,7 +216,7 @@
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="Descripció restaurant"
+                    tools:text="Descripció restaurant"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="12sp"
                     app:fontFamily="@font/roboto"

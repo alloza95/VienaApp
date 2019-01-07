@@ -1,21 +1,17 @@
 package com.arnauac.vienaapp.ProductActivity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.arnauac.vienaapp.Detail_product;
 import com.arnauac.vienaapp.R;
-import com.arnauac.vienaapp.fragments_MainActivity.MenuFragment.CategoryItemAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,8 +24,6 @@ public class CategoryActivity extends AppCompatActivity {
     //Model
     List<ProductItem> items;
 
-    //Referències a elements de la pantalla
-    private RecyclerView recyclerView;
     private ProductItemAdapter adapter;
 
     @Override
@@ -43,7 +37,8 @@ public class CategoryActivity extends AppCompatActivity {
         ImageView btn_back = findViewById(R.id.btn_back_category);
 
         items = new ArrayList<>();
-        recyclerView = findViewById(R.id.listProducts);
+        //Referències a elements de la pantalla
+        RecyclerView recyclerView = findViewById(R.id.listProducts);
         adapter = new ProductItemAdapter(this, items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

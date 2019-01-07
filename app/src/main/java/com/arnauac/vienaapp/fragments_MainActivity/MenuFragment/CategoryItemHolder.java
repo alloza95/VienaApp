@@ -31,7 +31,6 @@ class   CategoryItemHolder extends RecyclerView.ViewHolder{
 
     }
 
-
     void bind(CategoryItem item){
         nameCategory_view.setText(item.getNameCategory());
         Glide
@@ -40,5 +39,4 @@ class   CategoryItemHolder extends RecyclerView.ViewHolder{
                 .apply(new RequestOptions().fitCenter())
                 .into(imageCategory_view);
     }
-
 }

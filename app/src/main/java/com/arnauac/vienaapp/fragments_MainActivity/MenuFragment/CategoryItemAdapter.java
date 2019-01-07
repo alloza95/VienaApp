@@ -16,7 +16,6 @@ public class CategoryItemAdapter extends RecyclerView.Adapter<CategoryItemHolder
     private List<CategoryItem> items;
     private OnClickListener onClickListener;
 
-
     CategoryItemAdapter(FragmentActivity mContext, List<CategoryItem> items) {
         this.mContext = mContext;
         this.items = items;

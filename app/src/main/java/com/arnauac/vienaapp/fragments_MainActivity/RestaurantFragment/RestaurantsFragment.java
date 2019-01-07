@@ -26,7 +26,6 @@ public class RestaurantsFragment extends Fragment {
 
     List<RestaurantItem> items;
     private RestaurantItemAdapter adapter;
-    private RecyclerView recyclerView;
 
     @Nullable
     @Override
@@ -34,7 +33,7 @@ public class RestaurantsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_restaurants, container, false);
 
         items = new ArrayList<>();
-        recyclerView = view.findViewById(R.id.listRestaurant);
+        RecyclerView recyclerView = view.findViewById(R.id.listRestaurant);
         adapter = new RestaurantItemAdapter(this.getContext(), items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));

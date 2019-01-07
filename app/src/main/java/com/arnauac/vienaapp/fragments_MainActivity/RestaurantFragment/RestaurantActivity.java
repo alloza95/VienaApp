@@ -25,6 +25,7 @@ public class RestaurantActivity extends AppCompatActivity {
         setContentView(R.layout.activity_restaurant);
 
         ImageView btn_back = findViewById(R.id.btn_back);
+        TextView title_toolbar = findViewById(R.id.toolbar_name_restaurant);
 
         TextView rName_view = findViewById(R.id.rName_view);
         TextView rStreet_view = findViewById(R.id.rStreet_view);
@@ -39,6 +40,7 @@ public class RestaurantActivity extends AppCompatActivity {
 
         RestaurantItem restaurant = (RestaurantItem) getIntent().getSerializableExtra("itemRestaurant");
 
+        title_toolbar.setText(restaurant.nameRestaurant);
         rName_view.setText(restaurant.nameRestaurant);
         rStreet_view.setText(restaurant.streetRestaurant + ", ");
         rNumber_view.setText(restaurant.numberRestaurant);

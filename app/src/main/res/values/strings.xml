@@ -6,4 +6,9 @@
     <string name="logo_viena">Logo Viena</string>
     <string name="menu">Menu</string>
     <string name="restaurants">Restaurants</string>
+    <string name="boto_tornar">Botó tornar</string>
+    <string name="imatge_del_producte">Imatge del producte</string>
+    <string name="imatge_del_restaurant">Imatge del restaurant</string>
+    <string name="troba_el_teu_restaurant">Troba el teu restaurant</string>
+    <string name="categoria_imatge">Imatge d\'un producte de la categoria</string>
 </resources>

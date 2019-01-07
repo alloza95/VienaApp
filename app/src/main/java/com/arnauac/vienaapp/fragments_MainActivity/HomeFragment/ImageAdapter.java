@@ -3,7 +3,6 @@ package com.arnauac.vienaapp.fragments_MainActivity.HomeFragment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -16,7 +15,7 @@ public class ImageAdapter extends PagerAdapter {
     private FragmentActivity mContext;
     private int[] mImageIds = new int[]{R.drawable.home_01, R.drawable.home_02, R.drawable.home_03, R.drawable.home_04, R.drawable.home_05, R.drawable.home_06, R.drawable.home_07 };
 
-    public ImageAdapter(FragmentActivity context){
+    ImageAdapter(FragmentActivity context){
         mContext = context;
 
     }
@@ -30,10 +29,11 @@ public class ImageAdapter extends PagerAdapter {
         return view == object;
     }
 
+    @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView imageView = new ImageView(mContext);
-        // imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        //imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
         Glide
                 .with(imageView.getContext())

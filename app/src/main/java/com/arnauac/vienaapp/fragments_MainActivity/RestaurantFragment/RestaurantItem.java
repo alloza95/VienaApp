@@ -12,19 +12,6 @@ class RestaurantItem implements Serializable {
 
      }
 
-    public RestaurantItem(String nameRestaurant, String streetRestaurant, String numberRestaurant, String codepostRestaurant, String townRestaurant, String telephonRestaurant, String horaryRestaurant, String descriptionRestaurant, String imageRestaurant, ServicesItem servicesItem) {
-        this.nameRestaurant = nameRestaurant;
-        this.streetRestaurant = streetRestaurant;
-        this.numberRestaurant = numberRestaurant;
-        this.codepostRestaurant = codepostRestaurant;
-        this.townRestaurant = townRestaurant;
-        this.telephonRestaurant = telephonRestaurant;
-        this.horaryRestaurant = horaryRestaurant;
-        this.descriptionRestaurant = descriptionRestaurant;
-        this.imageRestaurant = imageRestaurant;
-        this.services = servicesItem;
-    }
-
     public String getNameRestaurant() {
         return nameRestaurant;
     }
