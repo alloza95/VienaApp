@@ -11,4 +11,6 @@
     <string name="imatge_del_restaurant">Imatge del restaurant</string>
     <string name="troba_el_teu_restaurant">Troba el teu restaurant</string>
     <string name="categoria_imatge">Imatge d\'un producte de la categoria</string>
+    <string name="horari">Horari:</string>
+    <string name="descripcio">Descripció:</string>
 </resources>

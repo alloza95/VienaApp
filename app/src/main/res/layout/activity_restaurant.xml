@@ -74,13 +74,12 @@
                     android:id="@+id/rImage_view"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginTop="0dp"
+                    android:contentDescription="@string/imatge_del_restaurant"
                     app:layout_constraintDimensionRatio="16:9"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@color/grey_font"
-                    android:contentDescription="@string/imatge_del_restaurant" />
+                    app:srcCompat="@drawable/emergency_image" />
 
                 <TextView
                     android:id="@+id/rName_view"
@@ -169,7 +168,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    tools:text="Horari:"
+                    android:text="@string/horari"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     app:fontFamily="@font/roboto_bold"
@@ -200,7 +199,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    tools:text="Descripció:"
+                    android:text="@string/descripcio"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp"
                     app:fontFamily="@font/roboto_bold"
