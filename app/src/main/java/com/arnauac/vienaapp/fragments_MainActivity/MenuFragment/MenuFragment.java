@@ -33,14 +33,12 @@ public class MenuFragment extends Fragment {
         items.add(new CategoryItem("Lleugers", R.drawable.cat_04_lleugers));
         items.add(new CategoryItem("Patates", R.drawable.cat_05_patates));
 
-
         //Referències a elements de la pantalla
         RecyclerView recyclerView = view.findViewById(R.id.listCategory);
         CategoryItemAdapter adapter = new CategoryItemAdapter(this.getActivity(), items);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         recyclerView.setAdapter(adapter);
-
 
         adapter.setOnClickListener(new CategoryItemAdapter.OnClickListener() {
             @Override
@@ -50,7 +48,6 @@ public class MenuFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
 
         return view;
     }

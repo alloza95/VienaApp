@@ -1,27 +1,21 @@
 package com.arnauac.vienaapp.ProductActivity;
 
 public class ProductItem {
-    private String nameProduct;
-    private int imageProduct;
+    private String nameProduct, imageProduct;
 
-    public ProductItem(String nameProduct, int image) {
+    public ProductItem() {
+    }
+
+    public ProductItem(String nameProduct, String imageProduct) {
         this.nameProduct = nameProduct;
-        this.imageProduct = image;
+        this.imageProduct = imageProduct;
     }
 
     public String getNameProduct() {
         return nameProduct;
     }
 
-    public void setNameProduct(String nameProduct) {
-        this.nameProduct = nameProduct;
-    }
-
-    public int getImageProduct() {
+    public String getImageProduct() {
         return imageProduct;
-    }
-
-    public void setImageProduct(int imageProduct) {
-        this.imageProduct = imageProduct;
     }
 }
