@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.arnauac.vienaapp.Detail_product;
 import com.arnauac.vienaapp.R;
@@ -23,8 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
-    private Button btn;
-
     //Model
     List<ProductItem> items;
 
@@ -37,15 +37,10 @@ public class CategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
         Intent intent = getIntent();
         String text = intent.getStringExtra("nameCategory");
-        getSupportActionBar().setTitle(text);
+        TextView title = findViewById(R.id.category_name_toolbar);
+        ImageView btn_back = findViewById(R.id.btn_back_category);
 
         items = new ArrayList<>();
         recyclerView = findViewById(R.id.listProducts);
@@ -62,6 +57,14 @@ public class CategoryActivity extends AppCompatActivity {
                 intent.putExtra("product", producte);
 
                 startActivity(intent);
+            }
+        });
+
+        title.setText(text);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 
@@ -83,14 +86,5 @@ public class CategoryActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    @Override
-    public boolean onOptionsItemSelected (MenuItem item){
-        int id = item.getItemId();
-        if (id == android.R.id.home){
-            this.finish();
-        }
-        return  super.onOptionsItemSelected(item);
     }
 }

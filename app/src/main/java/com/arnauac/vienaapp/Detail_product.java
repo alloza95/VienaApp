@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,23 +22,16 @@ public class Detail_product extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_product);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
         ProductItem product = (ProductItem) getIntent().getSerializableExtra("product");
-        getSupportActionBar().setTitle(product.getNameProduct());
 
-        getSupportActionBar().setTitle(product.getNameProduct());
-
+        TextView titol_toolbar = findViewById(R.id.name_product_toolbar);
         TextView titol = findViewById(R.id.titol);
         TextView subtitol = findViewById(R.id.subtitol);
         TextView descripcio = findViewById(R.id.descripcio);
         ImageView img = findViewById(R.id.imatge);
+        ImageView btn_back = findViewById(R.id.btn_back_product);
 
-
+        titol_toolbar.setText(product.getNameProduct());
         titol.setText(product.getNameProduct());
         subtitol.setText(product.getSubtitleProduct());
         descripcio.setText(product.getDescriptionProduct());
@@ -46,13 +41,11 @@ public class Detail_product extends AppCompatActivity {
                 .apply(new RequestOptions().override(575,345).fitCenter())
                 .into(img);
 
-}
-    @Override
-    public boolean onOptionsItemSelected (MenuItem item){
-        int id = item.getItemId();
-        if (id == android.R.id.home){
-            this.finish();
-        }
-        return  super.onOptionsItemSelected(item);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
