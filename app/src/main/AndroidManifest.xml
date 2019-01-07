@@ -11,18 +11,21 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
-        <activity android:name=".ProductActivity.CategoryActivity" />
-        <activity android:name=".fragments_MainActivity.RestaurantFragment.RestaurantActivity" />
+        <activity android:name=".ProductActivity.CategoryActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".fragments_MainActivity.RestaurantFragment.RestaurantActivity" android:screenOrientation="portrait"/>
 
 
-        <activity android:name=".Detail_product">
+        <activity android:name=".Detail_product" android:screenOrientation="portrait">
 
         </activity>
     </application>
