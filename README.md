@@ -1,6 +1,7 @@
 # VienaApp
-Final project of the subject "Android Programming (Java)". An application for the "Viena" restaurant chain.
+Final project of the subject "Android Programming (Java)". I simulated designing and developing an application for the "Viena" restaurant chain. The project was done with Android Studio and Firebase.
 
+The **mark** of this project was **honors**.
 
 ### Home:
 
